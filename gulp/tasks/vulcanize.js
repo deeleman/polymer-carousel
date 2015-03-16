@@ -5,7 +5,7 @@
 		var vulcanize = require('gulp-vulcanize');
 		var config = settings.vulcanize;
 
-		gulp.task('vulcanize', function () {
+		gulp.task('vulcanize', ['dev'], function () {
 			return gulp.src(config.src)
 				.pipe(vulcanize(config.options))
 				.pipe(gulp.dest(config.options.dest));
