@@ -11,10 +11,10 @@ The following is a list of stuff still required before going gold:
 
 * The component should expose public `width`and `height` properties and honor them where defined. Resizing itself on a fluid way otherwise.
 * Images should adapt themselves to the container and not all the way around.
-* Support for mobile gestures such as `swipeLeft` and `swipeRight`.
+* Add a unit testing layer based on the Mocha test runner and the Chai assertion library according to the [vendor guidelines](https://www.polymer-project.org/0.5/articles/unit-testing-elements.html).
 * Replace the *fade in* transition by horizontal/vertical sliding
 * Polyfill transitions with jQuery animate (or any other CSS transitions polifyll library) for MSIE9
-* Add a unit testing layer based on the Mocha test runner and the Chai assertion library according to the [vendor guidelines](https://www.polymer-project.org/0.5/articles/unit-testing-elements.html).
+* Support for mobile gestures such as `swipeLeft` and `swipeRight`.
 
 ### C. Installation and deployment
 
