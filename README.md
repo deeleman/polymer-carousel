@@ -1,8 +1,19 @@
 # polymer-carousel
-A reusable Polymer component for rendering responsive image slideshows
+A reusable Polymer component for rendering (still not responsive) image slideshows
 
 ### Documentation in progress
 The current project lacks from a  decent documetnation yet. In the meantime, refer to the code in order to understand its functionality and follow the instructions below to setup a working environment for it, building or even packaging the component.
+
+### Yet to be done
+The following is a list of stuff still required before going gold:
+
+* The component should expose public `width`and `height` properties and honor them where defined. Resizing itself on a fluid way otherwise.
+* Images should adapt themselves to the container and not all the way around.
+* Support for mobile gestures such as `swipeLeft` and `swipeRight`.
+* Replace the *fade in* transition by horizontal/vertical sliding
+* Polyfill transitions with jQuery animate (or any other CSS transitions polifyll library) for MSIE9
+
+### Installation and deployment
 
 #### Installing dependencies
 
@@ -35,14 +46,23 @@ $ gulp build
 
 ##### Packaging the component
 
-The component and all its dependencies can be bundled in a single file to ease its distribution. For doing so, make sure the component has been built successfully and then run the packaging command `package`:
+The component and all its dependencies can be bundled in a single file to ease its distribution. For doing so, make sure a convenient gulp task will build and package the component for you by executing the following command:
 
 ```
-$ gulp build
 $ gulp package
 ````
 
-The component and all its depdendencies including the files required for bootstrapping the component will be bundlded in a single file for your convenience, located at `/components/packaged/polymer-carousel.html`.
+The component and all its dependencies including the files required for bootstrapping the component will be bundled into a single file for your convenience, located at `/components/packaged/polymer-carousel.html`. If you want to check the component live a demo has been added for your convenience, and can be viewed at `/demo/index.html`. Feel free to take a look into it by spawning a web server of your choice at the root folder. Eg
+
+```
+$ git clone https://github.com/deeleman/polymer-carousel.git
+$ cd polymer-carousel
+$ npm install
+$ gulp package
+$ python -m SimpleHTTPServer 8080
+```
+
+The contents will be available for your viewing pleasure at `http://localhost:8080` then.
 
 ###### Please note: This a very early work and is not meant for release.
 
