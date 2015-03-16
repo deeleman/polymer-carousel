@@ -42,7 +42,7 @@ $ gulp build
 $ gulp package
 ````
 
-The component and all its depdendencies including the files required for bootstrapping the component will be bundlded in a single filefor your convenience.
+The component and all its depdendencies including the files required for bootstrapping the component will be bundlded in a single file for your convenience, located at `/components/packaged/polymer-carousel.html`.
 
 ###### Please note: This a very early work and is not meant for release.
 
