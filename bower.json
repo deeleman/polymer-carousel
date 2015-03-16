@@ -1,0 +1,21 @@
+{
+  "name": "polymer-carousel",
+  "version": "0.1.0",
+  "authors": [
+    "Pablo Deeleman <deeleman@gmail.com>"
+  ],
+  "description": "A reusable Polymer component for rendering responsive image carousels",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5"
+  }
+}

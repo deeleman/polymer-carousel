@@ -1,0 +1,76 @@
+/**
+* Variables
+ */
+$em-pixels: 16px;
+$carousel-chrome: white;
+
+/**
+ * Function em() translates to pixels any value configured in ems:
+ * @param  {integer} $ems em units to translate
+ * @return {string}      value translated to pixes. Eg. '16px'
+ */
+@function em($ems){
+  @return $ems*$em-pixels;
+}
+
+/**
+* Creates prefixed transition rulesets for CSS animations
+ */
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+/**
+ * IE-friendly opacity
+ */
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    zoom: 1;
+    filter: alpha(opacity=$opacity*100);
+}
+
+/**
+ * Resets padding and margin on element.
+ */
+@mixin nogutter {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * Spreads DOM element boundaries to parent container.
+ * Requires pairing up with 'display' rules.
+ */
+@mixin contain {
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ * Animations
+ */
+@keyframes fadeIn {
+  from {
+      @include opacity(0);
+  }
+
+  to {
+      @include opacity(1);
+  }
+}
+
+/**
+ * Reset global styles. Rewrite afterwards if required.
+ */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul, li {
+    @include nogutter;
+    list-style-type: none;
+}

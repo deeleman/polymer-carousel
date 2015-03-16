@@ -1,0 +1,60 @@
+@import '../carousel-core/core';
+
+.carousel {
+    display: table;
+    @include contain;
+    .carousel-shell {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0; // CSS hack to remove the pesky white padding when using inline-block
+        .carousel-slides {
+            position: relative;
+            display: inline-block;
+            .carousel-slides-wrapper {
+                background: $carousel-chrome;
+                overflow: hidden;
+                min-width: 340px;
+                @include transition(all, 1.5s, ease);
+                img {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    @include opacity(0);
+                    @include transition(opacity, 2s, lineal);
+                    &.carousel-slide-active {
+                        display: block;
+                        @include opacity(1);
+                        animation-duration: 1.5s;
+                        animation-name: fadeIn;
+                    }
+                }
+            }
+            &.frame-white {
+                border: 10px solid $carousel-chrome;
+                box-shadow: 0 0 15px #888;
+            }
+            &.frame-round {
+                border-radius: 2%;
+                > * {
+                    border-radius: 1%;
+                }
+            }
+        }
+    }
+}
+
+polyfill-next-selector { content: ':host img' }
+::content img {
+    display: none;
+    width: 100%;
+    height: auto;
+    @include opacity(0);
+    @include transition(opacity, 2s, lineal);
+    &.carousel-slide-active {
+        display: block;
+        @include opacity(1);
+        animation-duration: 1.5s;
+        animation-name: fadeIn;
+    }
+}

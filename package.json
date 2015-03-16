@@ -1,0 +1,41 @@
+{
+  "name": "polymer-carousel",
+  "version": "0.1.0",
+  "description": "A reusable Polymer component for rendering responsive image carousels",
+  "main": "index.js",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-bower": "0.0.10",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jshint": "^1.9.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-vulcanize": "^5.0.0",
+    "imagemin-pngquant": "^4.0.0",
+    "jshint-stylish": "^1.0.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/deeleman/polymer-carousel"
+  },
+  "keywords": [
+    "google",
+    "polymer",
+    "carousel",
+    "responsive",
+    "images"
+  ],
+  "author": "Paul Deeleman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deeleman/polymer-carousel/issues"
+  },
+  "homepage": "https://github.com/deeleman/polymer-carousel"
+}
