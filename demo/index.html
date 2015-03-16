@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="import" href="../components/packaged/carousel-slideshow.html">
-    <style>
-        html, body, body > section {
-            height: 100%;
-            margin: 0;
-            background-color: #EBEBEB;
-        }
-    </style>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Carousel</title>
+    <link rel="stylesheet" href="../component/css/main.css">
+</head>
+<body style="background: #ebebeb;">
 
-<body style="background: #ebebeb;" unresolved>
-  <section>
+    <div id="first" class="carousel">
+      <div class="carousel-shell">
+        <div class="carousel-slides frame-white frame-round">
+          <article class="carousel-slides-wrapper">
+              <img src="1.jpg" class="carousel-slide">
+              <img src="2.jpg" class="carousel-slide">
+              <img src="3.jpg" class="carousel-slide">
+              <img src="4.jpg" class="carousel-slide">
+              <img src="5.jpg" class="carousel-slide">
+          </article>
+          <nav class="carousel-nav">
+              <p class="carousel-nav-skip carousel-nav-skip-prev">
+                   <input type="image" rel="prev" src="/component/images/arrow_left_white.png">
+              </p>
+              <ul class="carousel-nav-browser"></ul>
+              <p class="carousel-nav-skip carousel-nav-skip-next">
+                  <input type="image" rel="next" src="/component/images/arrow_right_white.png"></p>
+              </p>
+          </nav>
+        </div>
+      </div>
+    </div>
 
-      <carousel-slideshow refreshRatio="5000">
-          <img src="1.jpg">
-          <img src="2.jpg">
-          <img src="3.jpg">
-          <img src="4.jpg">
-          <img src="5.jpg">
-      </carousel-slideshow>
-
-  </section>
+    <script src="../component/js/main.js"></script>
 </body>
+</html>

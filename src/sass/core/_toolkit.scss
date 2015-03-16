@@ -1,8 +1,4 @@
-/**
-* Variables
- */
-$em-pixels: 16px;
-$carousel-chrome: white;
+@import 'variables';
 
 /**
  * Function em() translates to pixels any value configured in ems:
@@ -51,21 +47,15 @@ $carousel-chrome: white;
 }
 
 /**
- * Animations
- */
-@keyframes fadeIn {
-  from {
-      @include opacity(0);
-  }
-
-  to {
-      @include opacity(1);
-  }
-}
-
-/**
  * Reset global styles. Rewrite afterwards if required.
  */
+html,
+body {
+    @include nogutter;
+    @include contain;
+    box-sizing: border-box;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -73,4 +63,9 @@ $carousel-chrome: white;
 ul, li {
     @include nogutter;
     list-style-type: none;
+}
+
+input:focus,
+a:active {
+    outline:none;
 }

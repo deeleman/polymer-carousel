@@ -1,0 +1,9 @@
+@keyframes fadeIn {
+  from {
+      @include opacity(0);
+  }
+
+  to {
+      @include opacity(1);
+  }
+}

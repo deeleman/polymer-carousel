@@ -3,7 +3,6 @@
 
 	module.exports = function (gulp, errorHandler, settings, gulpTaskManager) {
 		var sass = require('gulp-sass');
-		var autoprefixer = require('gulp-autoprefixer');
 		var sourcemaps = require('gulp-sourcemaps');
 		var config = settings.sass;
 
@@ -12,9 +11,6 @@
 				.pipe(sourcemaps.init())
 				.pipe(sass(config.options))
 				.on('error', errorHandler)
-				.pipe(autoprefixer({
-					cascade: false
-				}))
 				.pipe(sourcemaps.write())
 				.pipe(gulp.dest(config.dest));
 		});
@@ -28,7 +24,6 @@
 		});
 
         gulpTaskManager.subscribe('dev', 'sass:dev');
-        gulpTaskManager.subscribe('build', 'sass:build');
-
+		gulpTaskManager.subscribe('build', 'sass:build');
 	};
 }(module));

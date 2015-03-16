@@ -7,7 +7,7 @@
 		var reporter = config.jshint.stylishReporter ? 'jshint-stylish' : 'default';
 
 		gulp.task('jshint', function () {
-			var stream = gulp.src(config.js.src)
+			var stream = gulp.src(config.js.src.component)
 				.pipe(jshint())
                 .on('error', errorHandler)
 				.pipe(jshint.reporter(reporter));

@@ -1,12 +1,14 @@
 (function (module) {
 	'use strict';
 
-	var buildPath = './components';
-
 	module.exports = {
 		js: {
-            src: './src/**/*.js',
-			dest: buildPath
+            src: {
+				vendor: [],
+				component: './src/js/*.js'
+			},
+            filename: 'main.js',
+			dest: './component/js'
 		},
 		jshint: {
 			lookup: true,
@@ -14,31 +16,17 @@
 			stopOnError: false
 		},
 		sass: {
-			src: './src/**/*.scss',
-			dest: buildPath,
+			src: ['./src/sass/*.scss', './src/sass/**/*.scss'],
+            filename: 'polymer_carousel.css',
+			dest: './component/css',
 			options: {
-				outputStyle: 'compressed',
+				outputStyle: 'compressed', // 'nested' || 'compressed'
 				sourceComments: false
 			}
 		},
-		html: {
-			src: './src/**/*.html',
-			dest: buildPath
-		},
 		images: {
 			src: './src/images/*',
-			dest: './components/images',
-		},
-		bower: {
-			dest: buildPath
-		},
-		vulcanize: {
-			src: './components/carousel-slideshow/carousel-slideshow.html',
-			options: {
-				dest: buildPath + '/packaged',
-				inline: true,
-				strip: false
-			}
+			dest: './component/images',
 		}
 	};
 
